@@ -8,10 +8,23 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerFutbolistas"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="408dp"
+        android:layout_height="664dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Creditos" />
+
+    <Button
+        android:id="@+id/Creditos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Creditos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

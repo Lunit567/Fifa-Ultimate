@@ -1,9 +1,11 @@
 package luna.martin.fifa_ultimate
 
 import android.app.DownloadManager
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -13,11 +15,17 @@ import luna.martin.fifa_ultimate.adaptador.FutbolistaAdapter
 import luna.martin.fifa_ultimate.modelo.Futbolista
 
 class MainActivity : AppCompatActivity() {
+    lateinit var BtCreditos:Button
     lateinit var Mrecycler: RecyclerView
     val listaFutbolista = ArrayList<Futbolista>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        BtCreditos = findViewById(R.id.Creditos)
+        BtCreditos.setOnClickListener{
+            val credit = Intent(this,creditos::class.java)
+            startActivity(credit)
+        }
         Mrecycler = findViewById(R.id.RecyclerFutbolistas)
         Mrecycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         getFutbolista()
